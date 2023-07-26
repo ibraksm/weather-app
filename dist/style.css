@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --green: hsl(120, 100%, 35%);
+    --light-green: hsl(120, 100%, 50%);
+    --dark-green: hsl(120, 100%, 25%);
+    --darker-green: hsl(120, 100%, 20%);
+    --white: hsl(0, 0%, 100%);
+    --translucent: hsl(0, 0%, 100%, 90%);
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+#content {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(var(--green), var(--light-green));
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px;
+}
+
+nav button {
+    background-color: var(--dark-green);
+    border: none;
+    border-radius: 20px;
+    min-width: 6rem;
+    min-height: 3rem;
+    cursor: pointer;
+    color: var(--white);
+    font-size: 1.25rem;
+    margin: 0 10px;
+    font-family: 'Nunito', sans-serif;
+}
+
+nav button:hover {
+    outline: 3px solid var(--white);
+    transition: outline 0.1s ease 0s;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 100px 100px;
+}
+
+svg {
+    color: var(--white);
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+form input {
+    background-color: var(--dark-green);
+    font-size: 1.5rem;
+    border: none;
+    font-family: 'Nunito', sans-serif;
+    height: 3rem;
+    width: 15rem;
+    border-radius: 20px;
+    padding: 0 20px;
+    margin: 0 90px;
+    color: var(--white);
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.infos {
+    margin: 0 30px;
+}
+
+.error-message {
+    color: hsl(0, 100%, 60%);
+}
+
+.temp {
+    font-size: 6rem;
+}
+
+.details {
+    border-left: 3px solid white;
+    padding: 0 25px;
+    margin: 0 25px;
+}
+
+.time {
+    color: var(--translucent);
+}
+
+.general {
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+.credits {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.credits:hover {
+    text-decoration: underline;
+}
