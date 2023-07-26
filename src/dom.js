@@ -6,7 +6,7 @@ function populate() {
     genNav();
     genInfos();
     genMain();
-    //genFooter();
+    genFooter();
 }
 
 
@@ -90,7 +90,7 @@ function genMain() {
     const countryElement = document.createElement("span");
     countryElement.classList.add("country");
     headingHeadline.appendChild(cityElement);
-    headingHeadline.appendChild(document.createTextNode(", "));
+    //headingHeadline.appendChild(document.createTextNode(", "));
     headingHeadline.appendChild(countryElement);
     heading.appendChild(headingHeadline);
 
@@ -129,12 +129,21 @@ function genMain() {
     content.appendChild(main);
 }
 
-/*
 function genFooter() {
-    
+    const content = document.getElementById("content");
+    const footer = document.createElement("footer");
+    const credits = document.createElement("a");
+
+    content.appendChild(footer);
+
+    credits.href = "https://github.com/kibrahimx/";
+    credits.target = "_blank";
+    credits.innerHTML = "Ibrahim Karsam";
+    credits.classList.add("credits");
+
+    footer.appendChild(credits);
 }
 
-*/
 
 async function populateDatas(city, units) {
     try {
@@ -149,7 +158,7 @@ async function populateDatas(city, units) {
         const windElement = document.querySelector(".wind");
         const humidityElement = document.querySelector(".humidity");
 
-        cityElement.innerHTML = dataObject.city;
+        cityElement.innerHTML = `${dataObject.city}, `;
         countryElement.innerHTML = dataObject.country;
         conditionElement.innerHTML = dataObject.condition;
         timeElement.innerHTML = dataObject.localtime;
